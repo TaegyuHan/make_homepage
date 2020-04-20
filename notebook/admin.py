@@ -10,6 +10,3 @@ class Notebook(admin.ModelAdmin):
         "category",
         "title",
     )
-
-    def category(self, obj):
-        return obj.category

@@ -11,3 +11,4 @@ class Notebook(core_models.TimeStampedModel):
     )
     image = models.ImageField(blank=True)
     text = models.TextField(default="")
+    link = models.TextField(default="")
