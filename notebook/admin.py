@@ -1,3 +1,15 @@
 from django.contrib import admin
+from . import models
 
-# Register your models here.
+
+@admin.register(models.Notebook)
+class Notebook(admin.ModelAdmin):
+
+    list_display = (
+        "updated",
+        "category",
+        "title",
+    )
+
+    def category(self, obj):
+        return obj.category
