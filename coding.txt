@@ -17,3 +17,10 @@
     - 자기소개(self_introductions)
         - 노트(notes)
             - 텍스트(texts)
+    
+    
+djagno make database:
+    python manage.py makemigrations
+    python manage.py migrate
+django create superuser : python manage.py createsuperuser 
+django seed push code : python manage.py <file name> --number <number>
