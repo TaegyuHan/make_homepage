@@ -1,0 +1,19 @@
+페이지(categorys)
+    - 코딩
+        - 데이터 분석(codings)
+            - 언어(languages)
+                - 노트(notes)
+                    - 텍스트(texts)
+
+        - 웹페이지(codings)
+            - 언어(languages)
+                - 노트(notes)
+                    - 텍스트(texts)
+
+    - 포트폴리오(portfolios)
+        - 노트(notes)
+            - 텍스트(texts)
+
+    - 자기소개(self_introductions)
+        - 노트(notes)
+            - 텍스트(texts)
