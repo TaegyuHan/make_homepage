@@ -5,7 +5,7 @@ from core import models as core_models
 class Portfolio_note(core_models.TimeStampedModel):
 
     category = models.ForeignKey(
-        "categorys.Category", related_name="Portfolio_note", on_delete=models.CASCADE
+        "categorys.Category", related_name="Portfolio_note", on_delete=models.PROTECT
     )
     title = models.TextField()
 

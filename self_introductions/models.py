@@ -5,7 +5,9 @@ from core import models as core_models
 class Self_introductions_note(core_models.TimeStampedModel):
 
     category = models.ForeignKey(
-        "categorys.Category", related_name="Self_introductions_note", on_delete=models.CASCADE
+        "categorys.Category",
+        related_name="Self_introductions_note",
+        on_delete=models.PROTECT,
     )
     title = models.TextField()
 
