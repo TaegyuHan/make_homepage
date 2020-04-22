@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+    Home
+{% endblock page_title %}
+
+{% block content %}
+
+    {{now}}
+
+    {% for language in object_list %}
+        <h3>
+            {{language.title}}
+        </h3>
+    {% endfor %}
+{% endblock content %}

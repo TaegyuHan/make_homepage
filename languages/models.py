@@ -15,6 +15,21 @@ class Language(core_models.TimeStampedModel):
 
 class Language_note(core_models.TimeStampedModel):
 
+    TEXT_SUBTITLE = "subtitle"
+    TEXT_CODE = "code"
+    TEXT_CONTENT = "content"
+    TEXT_IMAGE = "image"
+
+    TEXT_CHOICES = (
+        (TEXT_SUBTITLE, "subtitle"),
+        (TEXT_CODE, "code"),
+        (TEXT_CONTENT, "content"),
+        (TEXT_IMAGE, "image"),
+    )
+    category = models.CharField(
+        max_length=20, choices=TEXT_CHOICES, default=TEXT_CONTENT
+    )
+
     language_note = models.ForeignKey(
         "Language", related_name="language_note", on_delete=models.PROTECT
     )

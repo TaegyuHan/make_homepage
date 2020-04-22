@@ -17,6 +17,21 @@ class Self_introductions_note(core_models.TimeStampedModel):
 
 class Self_introductions_notes_text(core_models.TimeStampedModel):
 
+    TEXT_SUBTITLE = "subtitle"
+    TEXT_CODE = "code"
+    TEXT_CONTENT = "content"
+    TEXT_IMAGE = "image"
+
+    TEXT_CHOICES = (
+        (TEXT_SUBTITLE, "subtitle"),
+        (TEXT_CODE, "code"),
+        (TEXT_CONTENT, "content"),
+        (TEXT_IMAGE, "image"),
+    )
+
+    category = models.CharField(
+        max_length=20, choices=TEXT_CHOICES, default=TEXT_CONTENT
+    )
     title_text = models.ForeignKey(
         "Self_introductions_note",
         related_name="Self_introductions_notes_text",

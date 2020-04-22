@@ -12,13 +12,21 @@ class Language(admin.ModelAdmin):
     )
 
 
+class Language_notes_textInline(admin.TabularInline):
+
+    model = models.Language_notes_text
+
+
 @admin.register(models.Language_note)
 class Language_note(admin.ModelAdmin):
+
+    inlines = (Language_notes_textInline,)
 
     list_display = (
         "created",
         "language_note",
         "title",
+        "category",
     )
 
 
